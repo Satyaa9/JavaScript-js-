@@ -1,18 +1,16 @@
 const obj = {
 	name : "satish",
 	age : 19,
-	
-	fun:function(){
+
+	fun(){
 		console.log("in fun")
 	}
 };
 console.log(obj.name)
-obj.fun()
+obj.fun();
 
 /*
 OUTPUT:
 satish
 in fun
-
-Function Expression
 */
