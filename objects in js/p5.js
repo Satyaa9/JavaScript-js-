@@ -1,14 +1,16 @@
 const obj = {
 	name : "satish",
 	age : 19,
-
+	
 	fun:function(){
 		console.log("in fun")
 	}
 };
-console.log(obj)
+console.log(obj.name)
+obj.fun()
 
 /*
 OUTPUT:
-{ name: 'satish', age: 19, fun: [Function: fun] }
+satish
+in fun
 */
