@@ -22,4 +22,6 @@ task 1
 task 2
 
 jo parent sequince val execution complete hot nahi to-parent khalchya process block krt.
+
+aani he jr aapan frontend la dil tr akh frontend block kel jaat.
 */
