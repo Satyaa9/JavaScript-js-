@@ -1,10 +1,10 @@
-new Promise((resolve , reject) =>{
+new Promise((resolve, reject) => {
 	console.log("in promise")
 	reject()
 })
-.catch(() =>{
-	console.log("in catch block")
-})
+	.catch(() => {
+		console.log("in catch block")
+	})
 
 /*
 OUTPUT:

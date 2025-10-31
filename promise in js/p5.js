@@ -1,10 +1,10 @@
-new Promise((resolve , reject) =>{
+new Promise((resolve, reject) => {
 	console.log("in promise");
 	resolve()
 })
-.then(()=>{
-	console.log("in resolve")
-})
+	.then(() => {
+		console.log("in resolve")
+	})
 
 /*
 OUTPUT:

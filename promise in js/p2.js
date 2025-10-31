@@ -1,9 +1,9 @@
-let data = new Promise(resolve =>resolve(2))
+let data = new Promise(resolve => resolve(2))
 
 data.then(num => num * 2)
 data.then(num => num * 3)
 
-data.then(result => 
+data.then(result =>
 	console.log(result)
 )
 

@@ -1,12 +1,12 @@
-let data = new Promise ((resolve,reject) => {
+let data = new Promise((resolve, reject) => {
 	console.log("fetching data....")
 
-	setTimeout(() =>{
+	setTimeout(() => {
 		resolve("data fetched successfully")
- 	},2000)
+	}, 2000)
 })
 
-data.then( (result) => 
+data.then((result) =>
 	console.log(result)
 )
 

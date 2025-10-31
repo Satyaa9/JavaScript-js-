@@ -1,13 +1,13 @@
-new Promise((resolve , reject) =>{
+new Promise((resolve, reject) => {
 	console.log("in promise")
 	reject("promise rejected")
 })
-.then(()=>{
-	console.log("in then block")
-})
-.catch((err) =>{
-	console.log("in catch block", err)
-})
+	.then(() => {
+		console.log("in then block")
+	})
+	.catch((err) => {
+		console.log("in catch block", err)
+	})
 
 /*
 
