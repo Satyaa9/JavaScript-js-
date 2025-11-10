@@ -8,15 +8,36 @@
 </head>
 
 <body>
-    <div id="demo">
+    <!-- <div id="demo">
         <p>Hello</p>
         <span style="display: none;">Hidden Text</span>
+    </div> -->
+    <h1 id="text">Hello</h1>
+    <div>
+        <h1>Box1</h1>
     </div>
+    <div>
+        <h1>Box2</h1>
+    </div>
+
+    <h1 class="demo">Satish</h1>
+    <h1 class="demo">Sakshi</h1>
 
 
     <script>
-        const div = document.getElementById("demo");
-        console.log(div.textContent);
+
+         
+        /*const div = document.getElementById("demo");
+        console.log(div.textContent);*/
+        let ele = document.getElementById("text")
+        let divele = document.getElementsByTagName("div")
+        console.log(divele) //HTMLCollection(2) [div, div]
+        console.log(divele[0]) //indexing aaply keliye
+        console.log(ele)
+
+        let divele1 = document.getElementsByClassName("demo")
+        console.log(divele1)
+
 
     </script>
 </body>
