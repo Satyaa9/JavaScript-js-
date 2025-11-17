@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Search</h1>
+        <input id="input-id" type="text" placeholder="Enter user ID">
+        <button id="search-button">Search</button>
+
+        <div id="user-info"></div>
+    </div>
+
+    <!-- Script starts from here -->
+
+    <script>
+        const button = document.getElementById("search-button");
+        const input = document.getElementById("input-id");
+        const userInfoDiv = document.getElementById("user-info");
+        async function getData(userId) {
+            const promise = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+            return await promise.json();
+        }
+        button.addEventListener("click", async () => {
+            const value = input.value.trim();
+
+            if (value === "") {
+                alert("Please enter a user ID");
+                return;
+            }
+
+            const result = await getData(value);
+
+            if (!result.id) {
+                userInfoDiv.innerHTML = "<p class='error'>User not found.</p>";
+            } else {
+                userInfoDiv.innerHTML = `
+                    <h3>User Info</h3>
+                    <p><strong>Name:</strong> ${result.name}</p>
+                    <p><strong>Username:</strong> ${result.username}</p>
+                    <p><strong>Email:</strong> ${result.email}</p>
+                    <p><strong>Phone:</strong> ${result.phone}</p>
+                    <p><strong>Website:</strong> <a href="http://${result.website}" target="_blank">${result.website}</a></p>
+                `;
+            }
+            input.value = "";
+        });
+    </script>
+</body>
+
+</html>
